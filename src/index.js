@@ -16,10 +16,13 @@
 	// after the submission, create a new ramen and add it to the #ramen-menu div
 	// the new ramen doesn't need to persist; in other words if you refresh the page it's okay that the new ramen isnt on the page anymore
 
-
+let ramenMenu = document.getElementById("ramen-menu");
+let detailImage = document.getElementsByClassName("detail-image")[0];
+let count = 0;
 // Callbacks
-const handleClick = (ramen) => {
-  // Add code
+const handleClick = (ramen, image) => {
+  detailImage.src = image.src;
+  detailImage.alt = image.alt;
 };
 
 const addSubmitListener = () => {
@@ -27,7 +30,17 @@ const addSubmitListener = () => {
 }
 
 function ramenImages(ramen){
-  document.body.append()
+  let image = document.createElement("img");
+  image.src = ramen.image;
+  image.alt = ramen.name;
+
+  if (count === 0){
+    detailImage.src = image.src;
+    detailImage.alt = image.alt;
+    count++;
+  }
+  ramenMenu.append(image);
+  image.addEventListener("click", () => handleClick(ramen, image))
 }
 
 const displayRamens = () => {
