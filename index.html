@@ -18,7 +18,7 @@
   
   </div>
 
-
+  <button type="button" id="delete-button">🗑️</button> 
   <div id="ramen-detail">
     <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
     <h2 class="name">Insert Name Here</h2>
@@ -34,6 +34,14 @@
     Insert comment here
   </p>
 
+  <form id="edit-ramen">
+    <h4>Update the Featured Ramen</h4>
+    <label for="edit-rating">Rating: </label>
+    <input type="number" name="edit-rating" id="edit-rating" />
+    <label for="edit-comment">Comment: </label>
+    <textarea name="edit-comment" id="edit-comment"></textarea>
+    <input type="submit" value="Update" />
+  </form>
 
   <form id="new-ramen">
     <h4>Add New Ramen</h4>
@@ -49,7 +57,7 @@
     <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
     <input type="submit" id='submit-button' value="Create" />
   </form>
-
+  
 </body>
 
 </html>

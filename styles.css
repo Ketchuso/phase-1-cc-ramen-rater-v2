@@ -43,6 +43,15 @@ header {
   position: relative;
 }
 
+#delete-button{
+  position: relative;
+  left: 185px;
+  top: 484px;
+  font-size:17px;
+  border-color: black;
+  background-color: white;
+}
+
 .detail-image {
   height: 350px;
 }
